@@ -17,7 +17,7 @@ public class Animal {
 	private String nom;
 	
 	@Column(name="ani_propietari")
-	public String propietari;
+	public Persona propietari;
 
 	public String getNom() {
 		return nom;

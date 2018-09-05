@@ -23,6 +23,9 @@ public class Casa {
 	
 	@Column (name="cas_municipi")
 	private Municipi municipi;
+	
+	@Column (name="cas_propietari")
+	private Persona propietari;
 
 	public Long getId() {
 		return id;

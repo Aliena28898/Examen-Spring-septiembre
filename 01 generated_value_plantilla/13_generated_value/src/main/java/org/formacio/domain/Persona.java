@@ -10,6 +10,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="T_PERSONES")
+@SequenceGenerator(name="sequencia_persones", sequenceName="SEQ_PER")
 public class Persona {
 
 	/*
@@ -26,7 +27,7 @@ public class Persona {
 	 * @GeneratedValue(strategy=GenerationType.AUTO)
 	 */
 	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="sequencia_persones")
 	@Column(name="PER_ID")
 	private Long id;
 	
